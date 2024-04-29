@@ -1,5 +1,5 @@
 import React from 'react'
-import { BarChart, ResponsiveContainer, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts'
+import { BarChart , CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts'
 
 const data = [
     {
@@ -65,12 +65,12 @@ const data = [
 ]
 const TransactionChart = () => {
   return (
-		<div className="h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col flex-1">
+		<div className="h-[22rem] bg-white p-4 rounded-sm w-3/4 border border-gray-200 flex flex-col flex-1">
 			<strong className="text-gray-700 font-medium">Transactions</strong>
 			<div className="mt-3 w-full flex-1 text-xs">
-				<ResponsiveContainer width="100%" height="100%">
+				
 					<BarChart
-						width={500}
+						width={1200}
 						height={300}
 						data={data}
 						margin={{
@@ -88,7 +88,7 @@ const TransactionChart = () => {
 						<Bar dataKey="Income" fill="#0ea5e9" />
 						<Bar dataKey="Expense" fill="#ea580c" />
 					</BarChart>
-				</ResponsiveContainer>
+				
 			</div>
 		</div>
     
